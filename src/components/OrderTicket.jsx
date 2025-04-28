@@ -28,7 +28,7 @@ const Ticket = ({ id_ticket, id_train, from_station, to_station, price, time_sta
     await fetch('http://localhost:5000/orders', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ payment_method: payment, id_user: user.ID_USER, id_ticket })
+      body: JSON.stringify({ payment_method: payment, id_user: user.id_user, id_ticket, id_train })
     })
     setHidden(true)
     setPayment('')
